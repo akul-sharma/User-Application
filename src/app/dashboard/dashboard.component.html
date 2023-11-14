@@ -1,0 +1,12 @@
+<app-header (toggleSideNav)="toggleSideNav()"></app-header>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="showSideNav" class="sidenav col-md-2 sidebar-offcanvas vh-100 sticky-top overflow-auto bg-light pl-0 bg-dark">
+            <app-side-nav></app-side-nav>   
+        </div>
+        <div class="col m-0 p-0">
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
